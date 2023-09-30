@@ -12,7 +12,10 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 
 let currentSection = 0;
 const sections = document.querySelectorAll('section');
-
+const lineL1 = document.getElementById('lineL1');
+const lineL2 = document.getElementById('lineL2');
+const header = document.querySelector('.header');
+const links = document.getElementById('links');
 window.addEventListener('wheel', (event) => {
   if (event.deltaY > 0 && currentSection < sections.length - 1) {
     currentSection++;
@@ -25,9 +28,26 @@ window.addEventListener('wheel', (event) => {
   if (currentSection % 2 === 0) {  // Check if the section number is even
     lineL1.classList.remove('solid-color');
     lineL2.classList.remove('solid-color');
+    lineR1.classList.remove('solid-color');
+    lineR2.classList.remove('solid-color');
+    boxL1.classList.remove('solid-color');
+    boxL2.classList.remove('solid-color');
+    boxR1.classList.remove('solid-color');
+    boxR2.classList.remove('solid-color');
+    header.classList.remove('text-color-change');
+    links.classList.remove('links-color-change');
+
   } else {
     lineL1.classList.add('solid-color');
     lineL2.classList.add('solid-color');
+    lineR1.classList.add('solid-color');
+    lineR2.classList.add('solid-color');
+    boxL1.classList.add('solid-color');
+    boxL2.classList.add('solid-color');
+    boxR1.classList.add('solid-color');
+    boxR2.classList.add('solid-color');
+    header.classList.add('text-color-change');
+    links.classList.add('links-color-change');
   }
 
   window.scrollTo({

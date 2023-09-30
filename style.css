@@ -92,16 +92,20 @@ a{
     border: double 4px transparent;
     padding-left: 10px;
     padding-right: 10px;
-    color: var(--text-color)
+    color: var(--text-color);
+    transition: all .3s ease-in;
 }
 
+/* Added these styles to change the text color for specific sections */
+.text-color-change a,
+.text-color-change .nav-branding {
+  color: var(--background-color); /* Change this color as per your requirement */
+}
 
 .nav-link{
     transition: 0.7s ease;
 }
-.nav-link:hover{
-    color: var(--secondary-color);
-}
+
 .hamburger{
     display: none;
     cursor: pointer;
@@ -112,25 +116,128 @@ a{
     height: 3px;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
     background-color: black;
 }
 .main{
     overflow: hidden;
 }
+
 .left-bar #lineL1,
 .left-bar #lineL2 {
   position: fixed;
-  height: 100vh; /* Adjust the height to 100% of the viewport height */
-  width: 5px;    /* Adjust the width as per your design */
-  background: linear-gradient(to bottom, red, blue); /* Change the direction of the gradient */
-  top: 0;       /* Position it at the top */
-  left: 23px;      /* Adjust left property as per your design */
+  width: 3px;
+  height: 200px;
+  left: 45px;
+  transition: all .5s ease-in-out;
+
+}
+.left-bar #lineL1{
+    top: 20px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color)); /* Change the direction of the gradient */
 }
 
+.left-bar #lineL2{
+    bottom: 20px;
+    background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color)); /* Change the direction of the gradient */
+}
+.left-bar #boxL1,
+.left-bar #boxL2{
+    position: fixed;
+    left: 37.5px;
+    background: var(--secondary-color);
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    transition: all .5s ease-in-out;
+
+}
+.left-bar #boxL1{
+    top: 230px;
+}
+.left-bar #boxL2{
+    bottom: 230px;
+}
+
+.left-bar #lineL1,
+.left-bar #lineL2 {
+  /* existing styles */
+  transition: background 0.5s ease-in-out; /* Add this line */
+
+}
+
+.right-bar #lineR1,
+.right-bar #lineR2 {
+  position: fixed;
+  width: 3px;
+  height: 200px;
+  right: 45px;
+}
+.right-bar #lineR1{
+    top: 20px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color)); /* Change the direction of the gradient */
+}
+
+.right-bar #lineR2{
+    bottom: 20px;
+    background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color)); /* Change the direction of the gradient */
+}
+.right-bar #boxR1,
+.right-bar #boxR2{
+    position: fixed;
+    right: 37.5px;
+    background: var(--secondary-color);
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    transition: all .5s ease-in-out;
+
+}
+.right-bar #boxR1{
+    top: 230px;
+}
+.right-bar #boxR2{
+    bottom: 230px;
+}
+.right-bar #lineR1,
+.right-bar #lineR2 {
+  /* existing styles */
+  transition: background 0.5s ease-in-out; /* Add this line */
+}
 .solid-color {
-    background: blue !important;
+    background: var(--background-color) !important;
+    transition: background 0.5s ease-in-out;
+}
+
+.left-bar #links {
+    position: fixed;
+    left: 27px;
+    top: 53%;  /* Adjust according to your design */
+    transform: translateY(-50%);
+}
+
+.link-item {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-bottom: 40px; /* Adjust spacing between items */
+}
+
+.link-item a {
+    color: var(--text-color); /* Replace with actual color variable or value */
+    text-decoration: none;
+    font-size: 18px; /* Adjust size as needed */
+    font-family: "Bungee-Regular";
+    transition: all .5s ease-in;
+
+
+}
+.links-color-change a {
+    color: var(--background-color); /* Change this color as per your requirement */
   }
+
+
+
+
 .section1{
     background-color: var(--background-color);
     height: 100vh;
