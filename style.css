@@ -26,14 +26,14 @@
     font-display: swap;
 }
 :root {
-    --background-color: #0D1625;
+    --background-color: #201B32;
     --background-color-trans: transparent;
-    --text-color: #FCECD2;
+    --text-color: #FFF;
     --lowkey-accent-color: #FFF;
     --hella-lowkey-accent-color: #FFF;
     --super-hella-lac: #FFF;
-    --secondary-color: #FA00FF;
-    --primary-color: #FF9E00;
+    --secondary-color: #FFF;
+    --primary-color: #FBAE6A;
     --highlightER-color: #dab46e13;
     --title-fontsize: 50px;
     --nav-fontsize: 25px;
@@ -59,6 +59,8 @@ body, html {
     background: var(--background-color);
     margin: 0; /* Remove any default margin */
     padding: 0; /* Remove any default padding */
+    z-index: 2;
+
 
 }
 li{
@@ -77,12 +79,15 @@ a{
     padding: 0 130px;
     position: fixed;
     width: 100vw;
+    z-index: 2;
 }
 .nav-menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+    z-index: 2;
+
 }
 .nav-branding{
     position: relative;
@@ -93,23 +98,30 @@ a{
     border: double 4px transparent;
     padding-left: 10px;
     padding-right: 10px;
-    color: var(--text-color);
     transition: all .3s ease-in;
+    z-index: 2;
+
 }
 
 /* Added these styles to change the text color for specific sections */
 .text-color-change a,
 .text-color-change .nav-branding {
   color: var(--background-color); /* Change this color as per your requirement */
+  z-index: 2;
+
 }
 
 .nav-link{
     transition: 0.7s ease;
+    z-index: 2;
+
 }
 
 .hamburger{
     display: none;
     cursor: pointer;
+    z-index: 2;
+
 }
 .bar{
     display: block;
@@ -119,6 +131,8 @@ a{
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.5s ease-in-out;
     background-color: black;
+    z-index: 2;
+
 }
 .main{
     overflow: hidden;
@@ -135,12 +149,13 @@ a{
 }
 .left-bar #lineL1{
     top: 20px;
-    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color)); /* Change the direction of the gradient */
+    background: var(--primary-color); /* Change the direction of the gradient */
 }
 
 .left-bar #lineL2{
     bottom: 20px;
-    background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color)); /* Change the direction of the gradient */
+    background: var(--primary-color); /* Change the direction of the gradient */
+
 }
 .left-bar #boxL1,
 .left-bar #boxL2{
@@ -176,12 +191,14 @@ a{
 }
 .right-bar #lineR1{
     top: 20px;
-    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color)); /* Change the direction of the gradient */
+    background: var(--primary-color); /* Change the direction of the gradient */
+
 }
 
 .right-bar #lineR2{
     bottom: 20px;
-    background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color)); /* Change the direction of the gradient */
+    background: var(--primary-color); /* Change the direction of the gradient */
+
 }
 .right-bar #boxR1,
 .right-bar #boxR2{
@@ -240,6 +257,8 @@ a{
     background-color: var(--background-color);
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
+
 }
 
 .flex-container {
@@ -254,6 +273,8 @@ a{
     margin-right: 40%;
     margin-left: 13%;
     transform: translateY(150px);
+    z-index: 1;
+
 }
 
 .title h1{
@@ -262,17 +283,22 @@ a{
     font-family: "Bungee-regular";
     margin-bottom: 0;
     line-height: 1.5;
+
+
 }
 
 .gradient-text {
     font-family: "Bungee-Regular";
     font-weight: 400;
     margin-bottom: 0;
-    background: linear-gradient(to right, var(--primary-color) , var(--secondary-color) 50%);
+    background: var(--primary-color); /* Change the direction of the gradient */
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+
+
 }
 
 .paragraph h2{
@@ -283,6 +309,7 @@ a{
     margin-bottom: 0;
     line-height: 2;
     margin-top: 30px;
+
 }
 
 .paragraph h3{
@@ -291,13 +318,15 @@ a{
     font-family: "RobotoMono";
     font-weight: 400;
     margin-right: 20%;
+    z-index: 10;
+
 }
 span#cycle {
     color: var(--highlight-color);
     transition: transform 0.15s ease-in-out;
     display: inline-block;
     border-radius: 0.3vmax;
-    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color); /* Change the direction of the gradient */
     background-size: 100%;
     background-repeat: repeat;
     -webkit-background-clip: text;
@@ -307,8 +336,36 @@ span#cycle {
     font-family: "RobotoMono";
     font-size: var(--cycle-fontsize);
     font-variation-settings: "wght" 600;
+    z-index: 1;
+
 }
 
+.box {
+    width: 731px;
+    height: 731px;
+    z-index: 1;
+  }
+
+  .box .ellipse {
+    position: relative;
+    width: 730px;
+    height: 730px;
+    bottom: 165%;
+    left: 80%;
+    background-color: #9188d7;
+    border-radius: 365.5px;
+    filter: blur(150px);
+    transform: translate3d(0, 0, 0); /* Enables hardware acceleration */
+    z-index: 0;
+  }
+
+
+/* Other elements that should appear above the background-container */
+.intro, .photo-container, .title, .paragraph {
+    position: relative;
+    z-index: 1; /* Ensure this is higher than the z-index of .background-container */
+    /* Other styles */
+}
 .parent-container {
     position: relative;
 }
@@ -321,8 +378,8 @@ span#cycle {
 .right-shape{
     position: relative;
     margin-right: 87%;
-    top:-49.5%;
-    left: 43.5%;
+    top:-40%;
+    left: 80%;
 
 }
 .photo-container {
@@ -333,7 +390,7 @@ span#cycle {
     align-items: center;
     margin-left: auto;
     position: relative;
-    top: -290px;
+    top: -350px;
     right: 270px;
 }
 
@@ -356,7 +413,7 @@ span#cycle {
 }
 
 .section2{
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
     height: 100vh;
     width: 100vw;
 }
