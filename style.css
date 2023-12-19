@@ -258,6 +258,7 @@ a{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    position: relative;
 
 }
 
@@ -344,9 +345,11 @@ span#cycle {
     width: 731px;
     height: 731px;
     z-index: 1;
+
   }
 
   .box .ellipse {
+    /*
     position: relative;
     width: 730px;
     height: 730px;
@@ -355,7 +358,20 @@ span#cycle {
     background-color: #9188d7;
     border-radius: 365.5px;
     filter: blur(150px);
-    transform: translate3d(0, 0, 0); /* Enables hardware acceleration */
+    transform: translate3d(0, 0, 0);
+    z-index: 0;
+    */
+    bottom: 165%;
+    left: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 731px; /* Your specified width */
+    height: 731px; /* Your specified height */
+    background-color: #9188d7;
+    border-radius: 50%; /* Makes it a circle */
+    filter: blur(150px);
     z-index: 0;
   }
 
@@ -523,13 +539,15 @@ ul {
 }
 .box-containers{
     display: flex;
-    width: 1092px;
-    padding: 0px 30px;
+    width: 902px;
+
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    row-gap: 172px;
+    row-gap: 50px; /*modify this*/
+    padding: 0px 30px; /*modify this*/
     flex-wrap: wrap;
+    margin-left:20%;
 }
 .box1, .box2, .box3, .box4{
     width: 350px;
@@ -546,8 +564,8 @@ ul {
     width: 350px;
     height:175px;
     border: 3px solid var(--primary-color);
-    top:20%;
-    left: 20%;
+    top:5%;
+    left: 15%;
 
 
 }
