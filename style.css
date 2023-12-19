@@ -519,6 +519,37 @@ ul {
     background-color: var(--background-color);
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
+}
+.box-containers{
+    display: flex;
+    width: 1092px;
+    padding: 0px 30px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    row-gap: 172px;
+    flex-wrap: wrap;
+}
+.box1, .box2, .box3, .box4{
+    width: 350px;
+    height:175px;
+    background-color: #FBAE6A;
+    margin-left: 20%;
+    margin-top:20%;
+
+
+
+}
+.outline1, .outline2, .outline3, .outline4{
+    position: relative;
+    width: 350px;
+    height:175px;
+    border: 3px solid var(--primary-color);
+    top:20%;
+    left: 20%;
+
+
 }
 .section4{
     background-color: var(--text-color);
