@@ -123,3 +123,27 @@ function resumeFragment() {
 		}
 		}
 }
+// Define your URLs
+const urls = {
+    box1: "https://github.com/DannyM9021/BeachHacks2023",
+    box2: "https://github.com/skchuong100/GirlScoutCookie",
+    box3: "https://github.com/skchuong100/SUSSY-CHAT",
+    box4: "https://github.com/skchuong100/PokemonGame"
+};
+
+// Add event listeners
+document.querySelector('.box1').addEventListener('click', function() {
+    window.location.href = urls.box1;
+});
+
+document.querySelector('.box2').addEventListener('click', function() {
+    window.location.href = urls.box2;
+});
+
+document.querySelector('.box3').addEventListener('click', function() {
+    window.location.href = urls.box3;
+});
+
+document.querySelector('.box4').addEventListener('click', function() {
+    window.location.href = urls.box4;
+});

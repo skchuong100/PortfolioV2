@@ -37,7 +37,7 @@
     --highlightER-color: #dab46e13;
     --title-fontsize: 50px;
     --nav-fontsize: 25px;
-    --p-fontsize: 20px;
+    --p-fontsize: 15px;
     --h3-fontsize: 18px;
     --h2-fontsize: 25px;
     --cycle-fontsize: 30px;
@@ -352,33 +352,21 @@ span#cycle {
 }
 
 .box {
-    width: 731px;
-    height: 731px;
+    width: 700px;
+    height: 700px;
     z-index: 1;
 
   }
 
   .box .ellipse {
-    /*
-    position: relative;
-    width: 730px;
-    height: 730px;
-    bottom: 165%;
-    left: 80%;
-    background-color: #9188d7;
-    border-radius: 365.5px;
-    filter: blur(150px);
-    transform: translate3d(0, 0, 0);
-    z-index: 0;
-    */
     bottom: 165%;
     left: 80%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 731px; /* Your specified width */
-    height: 731px; /* Your specified height */
+    width: 700px; /* Your specified width */
+    height: 700px; /* Your specified height */
     background-color: #9188d7;
     border-radius: 50%; /* Makes it a circle */
     filter: blur(150px);
@@ -558,27 +546,105 @@ ul {
     padding: 0px 30px; /*modify this*/
     flex-wrap: wrap;
     margin-left:20%;
+    z-index: 1;
 }
 .box1, .box2, .box3, .box4{
     width: 350px;
     height:175px;
-    background-color: #FBAE6A;
+    background-color: var(--primary-color);
     margin-left: 20%;
     margin-top:20%;
-
+    z-index: 2;
 
 
 }
-.outline1, .outline2, .outline3, .outline4{
+
+
+
+.project1, .project2, .project3, .project4 {
+    position: relative;
+    z-index: 3; /* Ensure this is higher than the z-index of .outline classes */
+    /* Other styles */
+}
+.outline2, .outline4{
     position: relative;
     width: 350px;
     height:175px;
+    left: 12.5%;
+    top:-35%;
     border: 3px solid var(--primary-color);
-    top:5%;
-    left: 15%;
-
-
 }
+.outline1, .outline3{
+    position: relative;
+    width: 350px;
+    height:175px;
+    left: 12.5%;
+    top:-45%;
+    border: 3px solid var(--primary-color);
+}
+.outline1, .outline2, .outline3, .outline4{
+    position: relative;
+    z-index: 0;
+}
+
+.outline1{
+    top:-55%;
+}
+
+.outline2{
+    top:-40%;
+}
+
+.box-containers, .box1, .box2, .box3, .box4{
+    position: relative;
+    z-index: 2; /* Ensure this is higher than the z-index of .background-container */
+    /* Other styles */
+}
+
+.projectT1, .projectT2, .projectT3, .projectT4{
+    position: relative;
+    left: 5px;
+    font-family: "Bungee-Regular";
+}
+.projectinfo1, .projectinfo2, .projectinfo3, .projectinfo4{
+    font-family: "RobotoMono";
+    position: relative;
+    font-size: var(--p-fontsize);
+    left: 5px;
+    margin-right: 10px;
+}
+
+.box1, .box2, .box3, .box4 {
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    /* Other styles */
+}
+
+.box1:hover, .box2:hover, .box3:hover, .box4:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+}
+
+
+.circle-box2 {
+    width: 700px;
+    height: 700px;
+    z-index: 1;
+
+  }
+
+  .circle-box2 .ellipse2 {
+
+    position: absolute;
+    transform: translate(-50%, -60%);
+    left:50%;
+    width: 700px; /* Your specified width */
+    height: 700px; /* Your specified height */
+    background-color: #9188d7;
+    border-radius: 50%; /* Makes it a circle */
+    filter: blur(150px);
+    z-index: 0;
+  }
+
 .section4{
     background-color: var(--text-color);
     height: 100vh;
