@@ -131,7 +131,7 @@ a{
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.5s ease-in-out;
     background-color: black;
-    z-index: 2;
+    z-index: 1;
 
 }
 .main{
@@ -145,6 +145,7 @@ a{
   height: 200px;
   left: 45px;
   transition: all .5s ease-in-out;
+  z-index: 1;
 
 }
 .left-bar #lineL1{
@@ -166,6 +167,9 @@ a{
     height: 10px;
     flex-shrink: 0;
     transition: all .5s ease-in-out;
+    z-index: 1;
+
+
 
 }
 .left-bar #boxL1{
@@ -188,6 +192,8 @@ a{
   width: 2px;
   height: 200px;
   right: 45px;
+  z-index: 1;
+
 }
 .right-bar #lineR1{
     top: 20px;
@@ -209,6 +215,8 @@ a{
     height: 10px;
     flex-shrink: 0;
     transition: all .5s ease-in-out;
+    z-index: 1;
+
 
 }
 .right-bar #boxR1{
@@ -232,6 +240,8 @@ a{
     left: 27px;
     top: 53%;  /* Adjust according to your design */
     transform: translateY(-50%);
+    z-index: 1;
+
 }
 
 .link-item {
