@@ -324,7 +324,7 @@ a{
 }
 
 .paragraph h3{
-    font-size: var(--p-fontsize);
+    font-size: var(--h3-fontsize);
     color: var(--text-color);
     font-family: "RobotoMono";
     font-weight: 400;
@@ -473,7 +473,7 @@ span#cycle {
     flex-wrap: wrap;
     margin-left: 5%;
     margin-left: 60%;
-    margin-top: -6%;
+    margin-top: -7%;
 }
 
 .skill-title{
